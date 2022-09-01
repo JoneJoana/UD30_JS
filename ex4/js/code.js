@@ -1,19 +1,20 @@
 let valores = [true,5,false,"hola","adios",2];
 
 function mayorQue(){
-    if(valores[3] > valores[4]){
-        document.write("hola es mayor que adios");
+    palabras = valores.filter(element => typeof element === "string");
+    if(palabras[0] > palabras[1]){
+        document.write(palabras[0]+" es mayor que "+palabras[1]);
     }else{
-        document.write("adios es mayor que hola");
+        document.write(palabras[1]+" es mayor que "+palabras[0]);
     }
 }
 
-function mostrarBoolean(){
+function mostrarBoolean(){ //metodo find no funciona con booleans,me devulve array vacio
     document.write(!true+"\n");
     document.write(!false);
 }
 
-function operaciones(){
+function operaciones(){ //no me funciona con numeros, no rellena el array
     let suma = valores[1]+valores[5];
     let mult = valores[1]*valores[5];
     let rest = valores[1]-valores[5];
